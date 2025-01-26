@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Language Learning Extension",
+    "version": "1.0",
+    "description": "Translate and learn vocabulary",
+    "permissions": ["storage", "contextMenus"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }]
+  }
